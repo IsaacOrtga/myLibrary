@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Form from "../pure/form/Form";
-import { Results } from "../pure/results/Results";
+import Results from "../pure/results/Results";
 
 function ApiQuery() {
   const [booksData, setBooksData] = useState([]);

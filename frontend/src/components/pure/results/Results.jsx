@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import './results.css';
 
-export const Results = ({ booksData }) => {
+ function Results ({ booksData })  {
   const hasBooks = booksData?.length > 0;
   return (
     <main className='resultsContent'>
@@ -16,7 +16,7 @@ export const Results = ({ booksData }) => {
       ))) : ( "No se han encontrado resultados para esta búsqueda")}
     </main>
   );
-};
+}
 Results.propTypes = {
   booksData: PropTypes.arrayOf(
     PropTypes.shape({
@@ -29,3 +29,5 @@ Results.propTypes = {
     })
   ).isRequired,
 };
+
+export default Results;

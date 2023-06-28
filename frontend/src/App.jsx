@@ -1,5 +1,6 @@
 import './App.css'
-import ApiQuery from './components/container/apiQuery'
+import ApiQuery from './components/container/ApiQuery'
+import Navbar from './components/pure/navbar/Navbar'
 
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
   return (
 
     <div className="container">
+    <Navbar />
     <ApiQuery />
     </div>
 

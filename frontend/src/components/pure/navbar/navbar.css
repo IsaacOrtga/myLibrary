@@ -1,0 +1,55 @@
+.navbarContent {
+  height: 4rem;
+}
+.navbarInfo{
+    display: flex;
+    align-items: center;
+}
+.title {
+   -webkit-text-stroke: 1px #79ACD9;
+}
+.navMenu {
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  height: 10rem;
+  justify-content: center;
+  position: relative;
+  z-index: 9999;
+}
+.menuItem {
+  font-size: 18px;
+  list-style-type: none;
+  margin-top: 1.5rem;
+}
+.menuItem a {
+  color: #2e578c;
+  display: block;
+  padding: 0.3em 0;
+  text-decoration: none;
+}
+.menuItem a:hover {
+  color: #2e578c;
+  cursor: pointer;
+}
+.spanMenuButton {
+ margin-left: auto;
+
+}
+.spanMenuButton span {
+  background-color: #2e578c;
+  display: block;
+  height: 0.25rem;
+  margin-bottom: 0.4rem;
+  margin-top: 0.4rem;
+  transition: background-color 0.3s ease-in-out;
+  width: 2rem;
+}
+@media (max-width: 768px) {
+  .navMenu {
+    display: none;
+  }
+  .navMenu.open {
+    display: block;
+  }
+}
