@@ -6,7 +6,7 @@ import './results.css';
   return (
     <div className='resultsContent'>
       {hasBooks ? ( booksData.map(book => (
-        <div className='booksContent' key={book.title}>
+        <div className='booksContent' key={book.id}>
           {/* <img className='bookImg' src={book.imageLinks.thumbnail} alt={book.title} />   */}
           <h2 className='bookTitle'>{book.title}</h2>
           <p className='bookYear'>{book.publishedDate}</p>
