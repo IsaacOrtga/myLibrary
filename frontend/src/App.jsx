@@ -1,19 +1,18 @@
-import './App.css'
-import ApiQuery from './components/container/ApiQuery'
-import Navbar from './components/pure/navbar/Navbar'
-
+import "./App.css";
+import FormQuery from "./components/container/formQuery/FormQuery";
+import Navbar from "./components/pure/navbar/Navbar";
 
 function App() {
-
-
   return (
-
     <div className="container">
-    <Navbar />
-    <ApiQuery />
+      <header>
+        <Navbar />
+      </header>
+      <main className="mainContent">
+        <FormQuery />
+      </main>
     </div>
-
-  )
+  );
 }
 
-export default App
+export default App;

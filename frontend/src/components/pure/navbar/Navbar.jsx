@@ -9,9 +9,9 @@ function Navbar() {
  
 
   return (
-    <header className="navbarContent">
+    <div className="navbarContent">
     <div className="navbarInfo">
-      <h1 className="title">My Library</h1>
+      <h1 className="title">Check Books</h1>
       <button
         className={`spanMenuButton ${openMenu ? "open" : ""}`}
         onClick={handleMenuButton}
@@ -34,7 +34,7 @@ function Navbar() {
           </li>
         </ul>
       </nav>
-    </header>
+    </div>
   );
 }
 
