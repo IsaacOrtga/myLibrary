@@ -9,9 +9,9 @@ function Presentation () {
     <br/>
     Check Books</h3>
     <div className='explainContent'>
-        <h5>Administra tus lecturas</h5>
-        <p>Ordena tu estantería con los libros que has leído</p>
-        <p>Guarda en tu Librería las obras pendientes</p>
+        <h5 className='textPresentation'>Administra tus lecturas</h5>
+        <p className='textPresentation'>Ordena tu estantería con los libros que has leído</p>
+        <p className='textPresentation'>Guarda en tu Librería las obras pendientes</p>
     <a className='regButton'>Registrarse</a>
 
     </div>
