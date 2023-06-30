@@ -13,14 +13,13 @@
   border-bottom-right-radius: 200px;
   height: 100%;
   background-image: url('../../../assets/public/img/books_background.jpg');
-  opacity: 0.5;
+  opacity: 0.3;
   background-size: cover;
 }
 
 
 .right-background {
   float: left;
-  
   width: 30%;
   height: 100%;
 
@@ -28,7 +27,6 @@
 }
 
 .formContent {
-  
   position: absolute;
   top: 0;
   left: 0;
@@ -36,26 +34,37 @@
   height: 100%;
 }
 .form {
-  margin-top: 4rem;
+  margin-top: 2rem;
   display: flex;
   flex-direction: column;
 }
 .form label {
   color: #e4ebf2;
   font-weight: bold;
+  margin-top: 1rem;
+  text-align: center;
+margin-bottom: 1rem;
   font-size: 20px;
 }
 .form input {
   border-radius: 5px;
 
+margin: 0 auto;
   padding: 10px;
   width: 80vw;
 }
 .button {
   width: 8rem;
   height: 2rem;
-  margin-bottom: 2.5rem;
+  border-radius: 5px;
+  font-size: 18px;
+  
   background-color: #e4ebf2;
+  
+ margin-left: auto;
+ margin-right: auto;
+ margin-top: 3rem;
+margin-bottom: 5rem;
   color: #2e578c;
 }
 .button:hover {
