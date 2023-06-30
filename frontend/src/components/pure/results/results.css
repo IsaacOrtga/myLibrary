@@ -23,3 +23,8 @@
     color: #D9A362;
     margin-top: 1rem;
 }
+.bookDescription span {
+    color: #888;
+    font-size: 14px;
+    margin-left: 5px;
+  }
