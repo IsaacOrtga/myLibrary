@@ -32,6 +32,7 @@ function ApiQuery({ inputValues, children }) {
         const response = await fetch(URL);
         const result = await response.json();
         console.log(result)
+       
         if (result && result.items && Array.isArray(result.items)) {
           const booksInfo = result.items.map((element) => {
             return {
@@ -45,6 +46,7 @@ function ApiQuery({ inputValues, children }) {
       } catch (error) {
         console.log("error", error);
       }
+      
     };
     getData();
   }, [inputValues]);

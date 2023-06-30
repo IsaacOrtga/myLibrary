@@ -1,15 +1,47 @@
+.mainFormContent {
+  position: relative;
+  height: 22rem;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+}
+
+.left-background {
+  float: left;
+  width: 70%;
+  border-top-right-radius: 200px;
+  border-bottom-right-radius: 200px;
+  height: 100%;
+  background-image: url('../../../assets/public/img/books_background.jpg');
+  opacity: 0.5;
+  background-size: cover;
+}
+
+
+.right-background {
+  float: left;
+  
+  width: 30%;
+  height: 100%;
+
+
+}
+
 .formContent {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-top: 4rem;
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 .form {
+  margin-top: 4rem;
   display: flex;
   flex-direction: column;
 }
 .form label {
-  color: #2e578c;
+  color: #e4ebf2;
   font-weight: bold;
   font-size: 20px;
 }

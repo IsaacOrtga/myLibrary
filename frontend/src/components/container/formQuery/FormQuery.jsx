@@ -22,33 +22,36 @@ function FormQuery() {
       ...inputValues,
       [name]: value
     });
+    setButtonClicked(false)
   };
 
-  const controlInputValues = (e) => {
-    setButtonClicked(false);
-    handleValue(e);
-  }
+
 
   return (
+    <div className='mainFormContent'>
+    <div className='left-background'></div>
+    <div className='right-background'></div>
     <div className='formContent'>
+
+  
       <form onSubmit={handleSubmit} className='form'>
         <label>Autor o título:</label>
         <input
-          onChange={controlInputValues}
+          onChange={handleValue}
           value={inputValues.author}
           type="text"
           name="author"
           placeholder='Günter Grass'
         />
         <input
-          onChange={controlInputValues}
+          onChange={handleValue}
           value={inputValues.title}
           type="text"
           name="title"
           placeholder='El tambor de hojalata'
         />
         <input
-          onChange={controlInputValues}
+          onChange={handleValue}
           value={inputValues.query}
           type="text"
           name="query"
@@ -64,6 +67,7 @@ function FormQuery() {
           )}
         </ApiQuery>
       )}
+      </div>
     </div>
   );
 }

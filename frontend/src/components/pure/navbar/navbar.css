@@ -1,9 +1,8 @@
 .navbarContent {
   height: 3rem;
   padding: 1rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 
-
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
 }
 .navbarInfo{
     display: flex;
@@ -11,10 +10,6 @@
 }
 .title {
    -webkit-text-stroke: 1px #79ACD9;
-}
-.navMenu {
-
-  
 }
 .menuItem {
   font-size: 18px;
@@ -36,7 +31,7 @@
 .spanMenuButton {
  margin-left: auto;
  border: none;
-background-color: white;
+background-color: transparent;
 }
 .spanMenuButton span {
   background-color: #2e578c;
@@ -61,5 +56,6 @@ background-color: white;
   .navMenu.open {
     display: block;
     opacity: 1;
+ 
   }
 }
