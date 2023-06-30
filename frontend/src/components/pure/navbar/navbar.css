@@ -1,21 +1,26 @@
 .navbarContent {
   height: 3rem;
   padding: 1rem;
-background-color: #e4ebf2;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+  background-color: #e4ebf2;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
 }
-.navbarInfo{
-    display: flex;
-    align-items: center;
+.navbarInfo {
+  display: flex;
+  align-items: center;
 }
 .title {
-   -webkit-text-stroke: 1px #79ACD9;
+  -webkit-text-stroke: 2px #8C5B3E;
+  color:#e4ebf2;
 }
 .menuItem {
+  
   font-size: 18px;
   list-style-type: none;
   margin-top: 1.5rem;
   display: flex;
+  padding: 0.5rem;
   justify-content: center;
 }
 .menuItem a {
@@ -29,12 +34,12 @@ background-color: #e4ebf2;
   cursor: pointer;
 }
 .spanMenuButton {
- margin-left: auto;
- border: none;
-background-color: transparent;
+  margin-left: auto;
+  border: none;
+  background-color: transparent;
 }
 .spanMenuButton span {
-  background-color: #2e578c;
+  background-color: #8C5B3E;
   display: block;
   height: 0.25rem;
   margin-bottom: 0.4rem;
@@ -56,6 +61,8 @@ background-color: transparent;
   .navMenu.open {
     display: block;
     opacity: 1;
- 
+    height: auto;
+    padding: 1rem;
+    top: 1.5rem;
   }
 }
