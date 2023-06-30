@@ -35,7 +35,7 @@ function FormQuery() {
 
   
       <form onSubmit={handleSubmit} className='form'>
-        <label>Autor o título:</label>
+        <label>Autor:</label>
         <input
           onChange={handleValue}
           value={inputValues.author}
@@ -43,6 +43,7 @@ function FormQuery() {
           name="author"
           placeholder='Günter Grass'
         />
+        <label>Título:</label>
         <input
           onChange={handleValue}
           value={inputValues.title}
@@ -50,6 +51,7 @@ function FormQuery() {
           name="title"
           placeholder='El tambor de hojalata'
         />
+        <label>Correspondencia:</label>
         <input
           onChange={handleValue}
           value={inputValues.query}

@@ -1,9 +1,11 @@
 .resultsContent{
-    margin-top: 5rem;
+    padding: 10px;
+    position: absolute;
+    background-color: #e4ebf2;
 }
 .booksContent{
+    margin-top: 5rem;
     display: flex;
-    padding: 10px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -14,8 +16,10 @@
     height: 100%;
 }
 .bookTitle, .bookYear, .bookAuthor{
+    margin-top: 1rem;
     color: #8C5B3E;
 }
 .bookDescription{
     color: #D9A362;
+    margin-top: 1rem;
 }

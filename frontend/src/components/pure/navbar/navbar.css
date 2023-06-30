@@ -1,7 +1,7 @@
 .navbarContent {
   height: 3rem;
   padding: 1rem;
-
+background-color: #e4ebf2;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
 }
 .navbarInfo{

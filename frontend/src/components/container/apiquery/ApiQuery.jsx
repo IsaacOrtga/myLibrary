@@ -15,19 +15,21 @@ function ApiQuery({ inputValues, children }) {
         return;
       }
       let queryToSearch = "";
+      let authorToSearch = '';
+      let titleToSearch = '';
       if (author) {
-        queryToSearch += encodeURIComponent(author);
-        URL += `+inauthor:${queryToSearch}`;
+        authorToSearch += encodeURIComponent(author);
+        URL += `+inauthor:${authorToSearch}`;
       }
       if (title) {
-        queryToSearch += encodeURIComponent(title);
-        URL += `+intitle:${queryToSearch}`;
+        titleToSearch += encodeURIComponent(title);
+        URL += `+intitle:${titleToSearch}`;
       }
       if (query) {
         queryToSearch += encodeURIComponent(query);
         URL += `${queryToSearch}`;
       }
-
+    
       try {
         const response = await fetch(URL);
         const result = await response.json();

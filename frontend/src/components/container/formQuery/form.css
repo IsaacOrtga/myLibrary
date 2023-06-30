@@ -1,6 +1,6 @@
 .mainFormContent {
   position: relative;
-  height: 22rem;
+  height: 30rem;
   width: 100%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 
@@ -54,6 +54,7 @@
 .button {
   width: 8rem;
   height: 2rem;
+  margin-bottom: 2.5rem;
   background-color: #e4ebf2;
   color: #2e578c;
 }
