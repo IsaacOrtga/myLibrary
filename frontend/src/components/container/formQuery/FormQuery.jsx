@@ -48,7 +48,7 @@ function FormQuery() {
             name="title"
             placeholder="El tambor de hojalata"
           />
-          <label>Correspondencia:</label>
+          <label>Buscar por coincidencia:</label>
           <input
             onChange={handleValue}
             value={inputValues.query}

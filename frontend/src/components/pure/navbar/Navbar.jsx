@@ -30,7 +30,7 @@ function Navbar() {
             <a href="#">Biblioteca</a>
           </li>
           <li className="menuItem">
-            <a href="#">Iniciar Sesión</a>
+            <a href="/register">Iniciar Sesión</a>
           </li>
         </ul>
       </nav>

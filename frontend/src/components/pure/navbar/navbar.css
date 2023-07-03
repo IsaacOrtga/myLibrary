@@ -3,6 +3,7 @@
   padding: 1rem;
   background-color: #e4ebf2;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-bottom: 1px groove gray;
   display: flex;
   flex-direction: column;
 }
@@ -10,7 +11,8 @@
   display: flex;
   align-items: center;
 }
-.title {
+.title a{
+  text-decoration: none;
   -webkit-text-stroke: 2px #8C5B3E;
   color:#e4ebf2;
 }
@@ -37,6 +39,7 @@
   margin-left: auto;
   border: none;
   background-color: transparent;
+  cursor: pointer;
 }
 .spanMenuButton span {
   background-color: #8C5B3E;
@@ -47,7 +50,7 @@
   transition: background-color 0.3s ease-in-out;
   width: 2rem;
 }
-@media (max-width: 768px) {
+
   .navMenu {
     display: none;
     background: white;
@@ -65,4 +68,4 @@
     padding: 1rem;
     top: 1.5rem;
   }
-}
+
