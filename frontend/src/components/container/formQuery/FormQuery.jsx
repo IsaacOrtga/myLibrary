@@ -3,28 +3,25 @@ import "./form.css";
 import ApiQuery from "../apiquery/ApiQuery";
 import Results from "../../pure/results/Results";
 import Presentation from "../../pure/presentation/Presentation";
+import NoResults from "../../pure/noResults/NoResults";
 
 function FormQuery() {
-  const [inputValues, setInputValues] = useState({
-    author: "",
-    title: "",
-    query: "",
-  });
+  const [author, setAuthor] = useState("");
+  const [title, setTitle] = useState("");
+  const [query, setQuery] = useState("");
   const [buttonClicked, setButtonClicked] = useState(false);
-
+  const [inputValues, setInputValues] = useState(null)
   const handleSubmit = (e) => {
     e.preventDefault();
     setButtonClicked(true);
+    setInputValues({
+      author,
+      title,
+      query
+    });
   };
 
-  const handleValue = (e) => {
-    const { name, value } = e.target;
-    setInputValues({
-      ...inputValues,
-      [name]: value,
-    });
-    setButtonClicked(false);
-  };
+   
 
   return (
     <div className="mainFormContent">
@@ -34,24 +31,24 @@ function FormQuery() {
         <form onSubmit={handleSubmit} className="form">
           <label>Autor:</label>
           <input
-            onChange={handleValue}
-            value={inputValues.author}
+            onChange={(e) => setAuthor(e.target.value)}
+            value={author}
             type="text"
             name="author"
             placeholder="Günter Grass"
           />
           <label>Título:</label>
           <input
-            onChange={handleValue}
-            value={inputValues.title}
+            onChange={(e) => setTitle(e.target.value)}
+            value={title}
             type="text"
             name="title"
             placeholder="El tambor de hojalata"
           />
           <label>Buscar por coincidencia:</label>
           <input
-            onChange={handleValue}
-            value={inputValues.query}
+            onChange={(e) => setQuery(e.target.value)}
+            value={query}
             type="text"
             name="query"
             placeholder="Historia de España"
@@ -64,8 +61,8 @@ function FormQuery() {
         {buttonClicked ? (
           <ApiQuery inputValues={inputValues}>
             {(booksData, noData) => {
-              if (booksData.length === 0) {
-                return <Presentation />;
+              if (noData) {
+                return <NoResults />;
               } else {
                 return <Results booksData={booksData} noData={noData} />;
               }

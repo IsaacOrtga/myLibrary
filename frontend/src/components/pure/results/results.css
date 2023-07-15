@@ -31,3 +31,6 @@
     margin-left: 5px;
     cursor: pointer;
   }
+  .errorContent{
+    background-color: red;
+  }

@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 function ApiQuery({ inputValues, children }) {
   const [booksData, setBooksData] = useState([]);
-  const [noData, setNoData] = useState(null);
+  const [noData, setNoData] = useState(false);
 
   useEffect(() => {
     const getData = async () => {
@@ -43,7 +43,7 @@ function ApiQuery({ inputValues, children }) {
           });
           setBooksData(booksInfo);
         } if(!result || !result.items || !Array.isArray(result.items)) {
-          setNoData("No se han encontrado resultados para esta búsqueda");
+          setNoData(true);
         }
       } catch (error) {
         console.log("error", error);
