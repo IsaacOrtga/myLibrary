@@ -2,6 +2,7 @@ import { useState } from 'react';
 import PropTypes from 'prop-types';
 import './results.css';
 import notImage from '../../../assets/public/img/noCover.png';
+import CounterSelector from '../../container/counterSelector/CounterSelector';
 
 function Results({ booksData, noData }) {
   const hasBooks = booksData?.length > 0;
@@ -17,6 +18,7 @@ function Results({ booksData, noData }) {
 
   return (
     <div className="resultsContent">
+    <CounterSelector />
       {hasBooks
         ? booksData.map((book, key) => (
             <div className="booksContent" key={key}>
@@ -51,6 +53,8 @@ function Results({ booksData, noData }) {
             </div>
           ))
         : noData && <p>{noData}</p>}
+    <CounterSelector />
+
     </div>
   );
 }
@@ -67,7 +71,7 @@ Results.propTypes = {
       cover: PropTypes.string,
     })
   ).isRequired,
-  noData: PropTypes.string,
+  noData: PropTypes.bool,
 };
 
 export default Results;

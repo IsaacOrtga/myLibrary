@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 import "./navbar.css";
 function Navbar() {
   const [openMenu, setOpenMenu] = useState(false);
@@ -11,7 +12,7 @@ function Navbar() {
   return (
     <div className="navbarContent">
     <div className="navbarInfo">
-      <h1 className="title">Check Books</h1>
+      <h1 className="title"><Link to="/">Check Books</Link></h1>
       <button
         className={`spanMenuButton ${openMenu ? "open" : ""}`}
         onClick={handleMenuButton}
@@ -24,13 +25,13 @@ function Navbar() {
       <nav className={`navMenu ${openMenu ? "open" : ""}`}>
         <ul className="menuList">
           <li className="menuItem">
-            <a href="#">Mi estantería</a>
+            <NavLink to="#">Mi estantería</NavLink>
           </li>
           <li className="menuItem">
-            <a href="#">Biblioteca</a>
+            <NavLink to="#">Biblioteca</NavLink>
           </li>
           <li className="menuItem">
-            <a href="/register">Iniciar Sesión</a>
+            <NavLink to="/register">Iniciar Sesión</NavLink>
           </li>
         </ul>
       </nav>

@@ -1,10 +1,13 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import PropTypes from "prop-types";
-
+import { CounterContext } from "../../useContext/CounterContext";
 
 function ApiQuery({ inputValues, children }) {
   const [booksData, setBooksData] = useState([]);
   const [noData, setNoData] = useState(false);
+  const {startIn} = useContext(CounterContext);
+  
+ 
 
   useEffect(() => {
     const getData = async () => {
@@ -14,20 +17,21 @@ function ApiQuery({ inputValues, children }) {
       if (!author && !title && !query) {
         return;
       }
+
       let queryToSearch = "";
       let authorToSearch = '';
       let titleToSearch = '';
       if (author) {
         authorToSearch += encodeURIComponent(author);
-        URL += `+inauthor:${authorToSearch}`;
+        URL += `+inauthor:${authorToSearch}&maxResults=10&startIndex=${startIn}`;
       }
       if (title) {
         titleToSearch += encodeURIComponent(title);
-        URL += `+intitle:${titleToSearch}`;
+        URL += `+intitle:${titleToSearch}&maxResults=10&startIndex=${startIn}`;
       }
       if (query) {
         queryToSearch += encodeURIComponent(query);
-        URL += `${queryToSearch}`;
+        URL += `${queryToSearch}&maxResults=10&startIndex=${startIn}`;
       }
     
       try {
@@ -36,6 +40,7 @@ function ApiQuery({ inputValues, children }) {
         console.log(result)
        
         if (result && result.items && Array.isArray(result.items)) {
+          setNoData(false)
           const booksInfo = result.items.map((element) => {
             return {
               ...element.volumeInfo,
@@ -51,7 +56,7 @@ function ApiQuery({ inputValues, children }) {
       
     };
     getData();
-  }, [inputValues]);
+  }, [inputValues, startIn]);
 
   return children(booksData, noData);
 }
