@@ -1,16 +1,17 @@
-import FormQuery from "../../container/formQuery/FormQuery";
+import LoginForm from "../forms/LoginForm";
 import Navbar from "../navbar/Navbar";
 
-function Home () {
+ function Login () {
+
   return (
     <>
     <header>
       <Navbar />
     </header>
       <main className="mainContent">
-        <FormQuery />
-      </main>
+        <LoginForm />
+    </main>
     </>
   )
 }
-export default Home;
+export default Login;

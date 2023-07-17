@@ -8,13 +8,19 @@
 
 }
 .formLogin {
+  margin-top: 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
-  width: 100%;
+  height:70%;
+  width: auto;
+  padding: 10px;
+  background-color: #e4ebf2;
+  filter: brightness(95%);
+  border-radius: 10px;
 }
+
 .formLogin label {
   color: #000000;
   font-weight: bold;

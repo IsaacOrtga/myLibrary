@@ -1,7 +1,7 @@
 import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { UserContext } from "../../useContext/UserContext";
-import "./register.css";
+import "./forms.css";
 
 function RegisterForm() {
   const [user, setUser] = useState({
