@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import "./form.css";
 import ApiQuery from "../apiquery/ApiQuery";
 import Results from "../../pure/results/Results";
 import Presentation from "../../pure/presentation/Presentation";
 import NoResults from "../../pure/noResults/NoResults";
+import Logout from "../../pure/logout/Logout";
+import { UserContext } from "../../useContext/UserContext";
 
 function FormQuery() {
   const [author, setAuthor] = useState("");
@@ -11,6 +13,10 @@ function FormQuery() {
   const [query, setQuery] = useState("");
   const [buttonClicked, setButtonClicked] = useState(false);
   const [inputValues, setInputValues] = useState(null)
+  const {user} = useContext(UserContext);
+  console.log(user)
+  const existUser = Object.values(user).some((value) => value.trim() !=='');
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setButtonClicked(true);
@@ -68,7 +74,12 @@ function FormQuery() {
               }
             }}
           </ApiQuery>
-        ) : (
+        ) : existUser ?
+        (
+          <Logout />
+        )
+        :
+         (
           <Presentation />
         )}
       </div>

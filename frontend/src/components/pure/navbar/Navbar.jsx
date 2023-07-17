@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import "./navbar.css";
+
 function Navbar() {
   const [openMenu, setOpenMenu] = useState(false);
   
@@ -31,7 +32,7 @@ function Navbar() {
             <NavLink to="#">Biblioteca</NavLink>
           </li>
           <li className="menuItem">
-            <NavLink to="/register">Iniciar Sesión</NavLink>
+            <NavLink to="/login">Iniciar Sesión</NavLink>
           </li>
         </ul>
       </nav>

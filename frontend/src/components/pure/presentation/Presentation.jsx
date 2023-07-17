@@ -1,6 +1,8 @@
+import {Link} from 'react-router-dom';
 import './presentation.css';
 
 function Presentation () {
+  
   return (
     <div className='presentationContent'>
     <article className='presentationMain'>
@@ -12,7 +14,7 @@ function Presentation () {
         <h5 className='textPresentation'>Administra tus lecturas</h5>
         <p className='textPresentation'>Ordena tu estantería con los libros que has leído</p>
         <p className='textPresentation'>Guarda en tu Librería las obras pendientes</p>
-    <a className='regButton'>Registrarse</a>
+    <Link to="/register" className='regButton'>Registrarse</Link>
 
     </div>
     
