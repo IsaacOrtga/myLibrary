@@ -6,7 +6,7 @@ function Presentation () {
   return (
     <div className='presentationContent'>
     <article className='presentationMain'>
-    <h3>Bienvenido a 
+    <h3>Bienvenid@ a 
     <br/>
     <br/>
     Check Books</h3>

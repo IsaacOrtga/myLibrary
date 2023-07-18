@@ -4,11 +4,11 @@ import Main from "./components/useContext/Main";
 
 function App() {
   return (
-      <div className="App">
-        <BrowserRouter>
-          <Main />
-        </BrowserRouter>
-      </div>
+    <div className="App">
+      <BrowserRouter>
+        <Main />
+      </BrowserRouter>
+    </div>
   );
 }
 

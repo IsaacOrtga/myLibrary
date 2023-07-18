@@ -40,7 +40,7 @@ function FormQuery() {
       <div className="right-background"></div>
       <div className="formContent">
         <form onSubmit={handleSubmit} className="form">
-          <label>Autor:</label>
+          <label>Autor/a:</label>
           <input
             onChange={(e) => setAuthor(e.target.value)}
             value={author}

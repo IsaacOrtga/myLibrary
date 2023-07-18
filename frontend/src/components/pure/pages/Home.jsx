@@ -1,4 +1,5 @@
 import FormQuery from "../../container/formQuery/FormQuery";
+import Footer from "../footer/Footer";
 import Navbar from "../navbar/Navbar";
 
 function Home () {
@@ -10,6 +11,9 @@ function Home () {
       <main className="mainContent">
         <FormQuery />
       </main>
+      <footer>
+      <Footer/>
+      </footer>
     </>
   )
 }
