@@ -5,9 +5,7 @@ import { CounterContext } from "../../useContext/CounterContext";
 function ApiQuery({ inputValues, children }) {
   const [booksData, setBooksData] = useState([]);
   const [noData, setNoData] = useState(false);
-  const {startIn} = useContext(CounterContext);
-  
- 
+  const { startIn } = useContext(CounterContext);
 
   useEffect(() => {
     const getData = async () => {
@@ -19,8 +17,8 @@ function ApiQuery({ inputValues, children }) {
       }
 
       let queryToSearch = "";
-      let authorToSearch = '';
-      let titleToSearch = '';
+      let authorToSearch = "";
+      let titleToSearch = "";
       if (author) {
         authorToSearch += encodeURIComponent(author);
         URL += `+inauthor:${authorToSearch}&maxResults=10&startIndex=${startIn}`;
@@ -33,27 +31,25 @@ function ApiQuery({ inputValues, children }) {
         queryToSearch += encodeURIComponent(query);
         URL += `${queryToSearch}&maxResults=10&startIndex=${startIn}`;
       }
-    
+
       try {
         const response = await fetch(URL);
         const result = await response.json();
-        console.log(result)
-       
         if (result && result.items && Array.isArray(result.items)) {
-          setNoData(false)
+          setNoData(false);
           const booksInfo = result.items.map((element) => {
             return {
               ...element.volumeInfo,
             };
           });
           setBooksData(booksInfo);
-        } if(!result || !result.items || !Array.isArray(result.items)) {
+        }
+        if (!result || !result.items || !Array.isArray(result.items)) {
           setNoData(true);
         }
       } catch (error) {
         console.log("error", error);
       }
-      
     };
     getData();
   }, [inputValues, startIn]);

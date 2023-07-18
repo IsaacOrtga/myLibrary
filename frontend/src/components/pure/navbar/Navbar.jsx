@@ -26,10 +26,10 @@ function Navbar() {
       <nav className={`navMenu ${openMenu ? "open" : ""}`}>
         <ul className="menuList">
           <li className="menuItem">
-            <NavLink to="#">Mi estantería</NavLink>
+            <NavLink to="/bookshelf">Estantería</NavLink>
           </li>
           <li className="menuItem">
-            <NavLink to="#">Biblioteca</NavLink>
+            <NavLink to="/library">Biblioteca</NavLink>
           </li>
           <li className="menuItem">
             <NavLink to="/login">Iniciar Sesión</NavLink>

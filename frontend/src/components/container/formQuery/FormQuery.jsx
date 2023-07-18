@@ -6,6 +6,7 @@ import Presentation from "../../pure/presentation/Presentation";
 import NoResults from "../../pure/noResults/NoResults";
 import Logout from "../../pure/logout/Logout";
 import { UserContext } from "../../useContext/UserContext";
+import { CounterContext } from "../../useContext/CounterContext";
 
 function FormQuery() {
   const [author, setAuthor] = useState("");
@@ -14,20 +15,24 @@ function FormQuery() {
   const [buttonClicked, setButtonClicked] = useState(false);
   const [inputValues, setInputValues] = useState(null)
   const {user} = useContext(UserContext);
-  console.log(user)
+  const {setStartIn} = useContext(CounterContext);
   const existUser = Object.values(user).some((value) => value.trim() !=='');
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setButtonClicked(true);
-    setInputValues({
-      author,
-      title,
-      query
-    });
-  };
-
+    setStartIn(0);
+    if(author != '' || title != '' || query != ''){
+      setInputValues({
+        author,
+        title,
+        query
+      });
+    }else{
+      alert("Por favor ingrese al menos un campo para realizar la búsqueda");
+    }
    
+  };
 
   return (
     <div className="mainFormContent">

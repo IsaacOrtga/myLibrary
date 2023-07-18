@@ -1,19 +1,19 @@
 import { useState } from 'react';
 import AppRoutes from '../../routes/AppRoutes'
-import { CounterContext } from './CounterContext';
+import { CounterProvider } from './CounterContext';
 import { UserProvider } from './UserContext';
 
 function Main () {
     const [startIn, setStartIn] = useState(0);
   return (
-    <CounterContext.Provider value={{
+  <UserProvider >
+    <CounterProvider value={{
         startIn,
         setStartIn,
     }}>
-    <UserProvider>
    <AppRoutes />
+   </CounterProvider>  
    </UserProvider>
-   </CounterContext.Provider>
   )
 }
 

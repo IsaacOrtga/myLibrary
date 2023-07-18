@@ -1,7 +1,6 @@
 .resultsContent{
     padding: 10px;
-    position: absolute;
-    background-color: #e4ebf2;
+    margin-top: 5rem;
 }
 .booksContent{
     margin-top: 3rem;
@@ -10,10 +9,17 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 5rem;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white;
+    filter: brightness(95%);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+
 }
 .bookImg{
     width: 50%;
     height: 100%;
+
 }
 .bookTitle, .bookYear, .bookAuthor{
     margin-top: 1rem;
@@ -34,3 +40,16 @@
   .errorContent{
     background-color: red;
   }
+
+  .saveButtonContent{
+    margin-top: 1rem;
+    padding: 10px;
+  }
+  
+.saveBookButton, .selectBook{
+margin: .5rem;
+width: 120px;
+height: 30px;
+background-color: #e4ebf2;
+border-radius: 5px;
+}

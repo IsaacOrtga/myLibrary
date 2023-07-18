@@ -45,7 +45,7 @@ function LoginForm() {
     <div>
       <div className="loginContent">
         <form onSubmit={sendUserData} className="formLogin">
-          <label>E-mail</label>
+          <label htmlFor="email">E-mail</label>
           <input
             onChange={saveLogin}
             value={email}
@@ -53,7 +53,7 @@ function LoginForm() {
             type="email"
             placeholder="clara@gmail.com"
           ></input>
-          <label>Contraseña</label>
+          <label htmlFor="password">Contraseña</label>
           <input
             onChange={saveLogin}
             value={password}

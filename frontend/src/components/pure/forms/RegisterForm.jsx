@@ -48,14 +48,14 @@ function RegisterForm() {
   return (
     <div className="loginContent">
       <form onSubmit={sendUserData} className="formLogin">
-        <label>Nombre</label>
+        <label htmlFor="name">Nombre</label>
         <input 
         onChange={saveUserData}
         value={name} 
         name="name"
         type="text" 
         placeholder="Clara"></input>
-        <label>E-mail</label>
+        <label htmlFor="email">E-mail</label>
         <input 
         onChange={saveUserData}
         value={email} 
@@ -63,7 +63,7 @@ function RegisterForm() {
         type="email" 
         placeholder="clara@gmail.com">
         </input>
-        <label>Contraseña</label>
+        <label htmlFor="password">Contraseña</label>
         <input
         onChange={saveUserData}
           value={password}
@@ -73,10 +73,11 @@ function RegisterForm() {
           pattern="(?=.*\d)(?=.*[a-zA-Z]).{5,}"
           title="Ha de tener al menos cinco letras y un número"
         ></input>
-        <label>Repetir Contraseña</label>
+        <label htmlFor="secondPassword">Repetir Contraseña</label>
         <input
           onChange={showSecondPassword}
           value={secondPassword}
+          name="secondPassword"
           type="password"
           placeholder="Las dos contraseñas han de coincidir"
         ></input>
