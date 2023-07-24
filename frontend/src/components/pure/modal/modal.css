@@ -27,14 +27,26 @@
 .textArea{
     resize: none;
     min-width: 70%;
+    font-size: 15px;
+    line-height: 25px;
     min-height: 70%;
     padding: 10px;
+    text-align: center;
     border: 1px solid black;
 }
 .saveButtonModal{
     width: 150px;
     height: 40px;
+  background-color: #e4ebf2;
+
 }
 .modalTitle, .textArea, .saveButtonModal{
     margin: .5rem;
+
+    color: #2e578c;
+}
+.saveButtonModal:hover{
+    cursor: pointer;
+  background-color: #79acd9;
+  color: #e4ebf2;
 }

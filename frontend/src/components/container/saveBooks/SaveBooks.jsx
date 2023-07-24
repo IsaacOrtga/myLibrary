@@ -1,12 +1,15 @@
-import Modal from "../../pure/modal/Modal";
-import Cookies from "js-cookie";
-import { useState } from "react";
+// import Modal from "../../pure/modal/Modal";
+// import Cookies from "js-cookie";
+import { useContext } from "react";
+import './saveBooks.css';
+import { ModalContext } from "../../useContext/ModalContext";
 
-function SaveBooks() {
-    const [showModal, setShowModal] = useState(false);
+function SaveBooks({index}) {
+    const {showModal, setShowModal, modalIndex, setModalIndex} = useContext(ModalContext);
 
     const activeModal = () => {
         setShowModal(!showModal);
+        setModalIndex(index)
     }
 
 
@@ -17,7 +20,7 @@ function SaveBooks() {
         <option value="bookshelf">Librería (leídos)</option>
         <option value="library">Biblioteca (pendientes)</option>
       </select>
-      {showModal && <Modal closeModal={activeModal} />}
+      {/* {showModal && <Modal closeModal={activeModal} modalIndex={modalIndex} />} */}
     </div>
   );
 }

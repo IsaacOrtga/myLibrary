@@ -50,3 +50,8 @@ height: 30px;
 background-color: #e4ebf2;
 border-radius: 5px;
 }
+.saveBookButton:hover{
+  cursor: pointer;
+  background-color: #79acd9;
+  color: #e4ebf2;
+}
