@@ -5,7 +5,7 @@ function NoResults() {
     <div className="noResultsContent">
     <div className='messageContent'>
       <h2 className="noResultsMessage">
-        No hay resultados para la búsqueda solicitada
+        Sin resultados
       </h2>
       </div>
     </div>

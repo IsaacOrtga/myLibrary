@@ -8,13 +8,14 @@ function ApiQuery({ inputValues, children }) {
   const { startIn } = useContext(CounterContext);
 
   useEffect(() => {
+    if (!inputValues || !inputValues.author && !inputValues.title && !inputValues.query) {
+        return;
+      }
     const getData = async () => {
       let URL = "https://www.googleapis.com/books/v1/volumes?q=";
       // const API_KEY = "AIzaSyBRJ5gV7ZIE__Ecv_zBBfBqrK1XyKk2cfk";
       const { author, title, query } = inputValues;
-      if (!author && !title && !query) {
-        return;
-      }
+      
 
       let queryToSearch = "";
       let authorToSearch = "";
@@ -62,6 +63,6 @@ ApiQuery.propTypes = {
     author: PropTypes.string,
     title: PropTypes.string,
     query: PropTypes.string,
-  }).isRequired,
+  })
 };
 export default ApiQuery;

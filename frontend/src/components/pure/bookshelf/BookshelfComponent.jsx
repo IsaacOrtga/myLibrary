@@ -21,13 +21,13 @@ function BookshelfComponent ()  {
 {books.length > 0 ?  books.map((book, index) => (
   <div className="bookshelfBooks" key={index}>
   <h2>{book.title}</h2>
-  {book.comment &&<div className="commentContent">
-   <h5>Tu comentario:</h5>
-  <p>{book.comment}</p></div>}
   <p>{book.authors}</p>
   <p>{book.publishedDate}</p>
   <img src={book.image}></img>
   <span className="spanDeleteBook" onClick={deleteBookfromCookies}>Eliminar</span>
+  {book.comment &&<div className="commentContent">
+   <h5>Tu comentario:</h5>
+  <p>{book.comment}</p></div>}
   </div>
 )) : 'No hay datos'}
     </div>

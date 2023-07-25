@@ -33,7 +33,7 @@ function Modal({ booksData, selectedValue }) {
     Cookies.set("book", JSON.stringify(bookArr), { expires: 1 });
     
     console.log(bookArr);
-   }if(bookArr.length = 5){
+   }else if(bookArr.length = 5){
     alert('Ya has guardado el máximo de libros permitidos');
    }
   };

@@ -28,8 +28,8 @@ function FormQuery() {
         title,
         query
       });
-    }else{
-      alert("Por favor ingrese al menos un campo para realizar la búsqueda");
+    }if(inputValues === null){
+      return;
     }
    
   };
@@ -72,7 +72,7 @@ function FormQuery() {
         {buttonClicked ? (
           <ApiQuery inputValues={inputValues}>
             {(booksData, noData) => {
-              if (noData) {
+              if (noData || inputValues === null) {
                 return <NoResults />;
               } else {
                 return <Results booksData={booksData} noData={noData} />;
