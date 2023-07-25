@@ -22,9 +22,9 @@
 
 }
 .bookTitle, .bookYear, .bookAuthor{
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     color: #8C5B3E;
-    text-align: justify;
+    text-align: center;
 }
 .bookDescription{
     color: #8C5B3E;

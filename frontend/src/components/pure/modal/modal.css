@@ -15,7 +15,7 @@
     height: 70%;
     width: 90%;
     background-color: white;
-  padding: 5px;
+    padding: 5px;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
@@ -41,7 +41,7 @@
 
 }
 .modalTitle, .textArea, .saveButtonModal{
-    margin: .5rem;
+    margin: 1rem;
 
     color: #2e578c;
 }
