@@ -28,7 +28,7 @@
     min-width: 100%;
     place-items: center;
     border-radius: 5px;
-    background-color: rgb(242, 240, 240);
+    background-color: #f2f0f0;
 }
 .commentContent h5, p{
     margin: .5rem;

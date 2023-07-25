@@ -42,9 +42,12 @@ h3{
     font-size: 1.8rem;
 
 }
+.regButton{
+    color: white;
+}
 
 .regButton{
-    background-color: #D9A362;
+    background-color: black;
     width: 15rem;
     height: 4rem;
     display: flex;
