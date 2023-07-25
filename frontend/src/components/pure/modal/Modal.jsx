@@ -7,6 +7,7 @@ import "./modal.css";
 function Modal({ booksData, selectedValue }) {
   // const [bookCookies, setBookCookies] = useState([]);
   const { setShowModal, modalIndex } = useContext(ModalContext);
+  const [comment, setComment] = useState("");
 
   const closeModal = () => {
     setShowModal(false);
@@ -14,12 +15,27 @@ function Modal({ booksData, selectedValue }) {
 
   const saveCookies = () => {
     const bookToSave = booksData[modalIndex];
-    Cookies.set("book", JSON.stringify(bookToSave), { expires: 1 });
     const savedBook = Cookies.get("book");
-    if (savedBook) {
-      const book = JSON.parse(decodeURIComponent(savedBook));
-      console.log(book);
-    }
+    const bookArr = savedBook ? JSON.parse(decodeURIComponent(savedBook)) : []
+    console.log(bookArr)
+    if (bookArr.length < 5){
+
+   
+    bookArr.push(
+      {
+        title: bookToSave?.title,
+        authors: bookToSave?.authors[0],
+        publishedDate: bookToSave.publishedDate,
+        image: bookToSave?.imageLinks?.thumbnail,
+        comment,
+      },
+    );
+    Cookies.set("book", JSON.stringify(bookArr), { expires: 1 });
+    
+    console.log(bookArr);
+   }if(bookArr.length = 5){
+    alert('Ya has guardado el máximo de libros permitidos');
+   }
   };
   return (
     <div className="modalOverlay" onClick={closeModal}>
@@ -28,6 +44,8 @@ function Modal({ booksData, selectedValue }) {
         <textarea
           maxLength="150"
           className="textArea"
+          value={comment}
+          onChange={(e) => setComment(e.target.value)}
           placeholder="Ejemplo: La trama da muchos giros, un thriller que me llenó de emociones en cada capítulo. En esta obra el autor dio un giro con respecto al estilo de su anterior novela. 
   a(Máximo 150 caracteres)"
         ></textarea>
