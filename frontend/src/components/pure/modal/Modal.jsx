@@ -4,16 +4,18 @@ import { useContext, useEffect, useState } from "react";
 import { ModalContext } from "../../useContext/ModalContext";
 import "./modal.css";
 
-function Modal({ booksData, selectedValue }) {
-  // const [bookCookies, setBookCookies] = useState([]);
+function Modal({ booksData, selectedValue, setSelectedValue }) {
   const { setShowModal, modalIndex } = useContext(ModalContext);
   const [comment, setComment] = useState("");
-
+  const [saveButtonText, setSaveButtonText] = useState('Guardar en')
+  const [existSelectedValue, setExisteSelectedValue] = useState(true);
   const closeModal = () => {
     setShowModal(false);
   };
 
   const saveCookies = () => {
+    setSaveButtonText('Guardando...');
+    setExisteSelectedValue(false);
     const bookToSave = booksData[modalIndex];
     const savedBook = Cookies.get("book");
     const bookArr = savedBook ? JSON.parse(decodeURIComponent(savedBook)) : []
@@ -31,8 +33,12 @@ function Modal({ booksData, selectedValue }) {
       },
     );
     Cookies.set("book", JSON.stringify(bookArr), { expires: 1 });
+   
+    setTimeout(() => {
+      setShowModal(false)
+      setExisteSelectedValue(true);
+    }, '1000');
     
-    console.log(bookArr);
    }else if(bookArr.length = 5){
     alert('Ya has guardado el máximo de libros permitidos');
    }
@@ -50,7 +56,7 @@ function Modal({ booksData, selectedValue }) {
   a(Máximo 150 caracteres)"
         ></textarea>
         <button className="saveButtonModal" onClick={saveCookies}>
-          Guardar en {selectedValue}
+          {saveButtonText} {existSelectedValue ? selectedValue : ''}
         </button>
       </div>
     </div>

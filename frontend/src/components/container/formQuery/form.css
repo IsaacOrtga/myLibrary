@@ -17,8 +17,6 @@ opacity: 0.8;
   opacity: 0.3;
   background-size: cover;
 }
-
-
 .right-background {
   float: left;
   width: 30%;
@@ -74,3 +72,4 @@ margin-bottom: auto;
   background-color: #79acd9;
   color: #e4ebf2;
 }
+

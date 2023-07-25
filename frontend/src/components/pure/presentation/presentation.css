@@ -5,24 +5,12 @@ background-color: #e4ebf2;
     width: 100%;
     height: 100vh;
 }
-/* .presentationContent::before{
-    content: "";
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    background-size: cover;
-    opacity: 0.90; 
-    height: 100vh;
-} */
 
 h3{
     font-size: 2.5rem;
     text-align: center;
     line-height: 0.9;
     margin-top: 3rem;
-  -webkit-text-stroke: 1px #8C5B3E;
    color: #000000;;
 }
 .explainContent{
@@ -36,7 +24,6 @@ h3{
 .explainContent .textPresentation, .regButton{
     margin-top: 2rem;
     font-weight: bold;
-  -webkit-text-stroke: 1px #8C5B3E;
   text-align: center;
     color: #000000;
     font-size: 1.8rem;

@@ -82,6 +82,7 @@ function Results({ booksData, noData }) {
         modalIndex={modalIndex} 
         booksData={booksData}
         selectedValue={selectedValue} 
+        setSelectedValue={setSelectedValue}
         />
       )}
     </>
